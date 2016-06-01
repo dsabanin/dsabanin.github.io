@@ -3,8 +3,6 @@
 <head>
     <title>Skull Beware: Dodge</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!-- Include JavaScript dependencies -->
-    <script type="text/javascript" src="js/dodge-jsdeps.js"></script>
     <style>
         h1,h2 {
             text-align: center;
@@ -26,24 +24,20 @@
         p.footer {
             color: grey
         }
-
-        #stats { height: 1.5em; }
-        #stats li { display: inline; margin-right: 1em; }
     </style>
 </head>
 
 <body style="margin: 0px">
 
 <h1>Dodge</h1>
-<p id="stats"></p>
+<h2 id="status"></h2>
 <div id="game"></div>
 
 <p class="footer">&copy; Created by Skull Beware.</p>
 
-<!-- Include Scala.js compiled code -->
-<script type="text/javascript" src="js/dodge-opt.js"></script>
-<!-- Run JSApp -->
-<script type="text/javascript" src="js/dodge-launcher.js"></script>
-
+<script type="text/javascript" src="dodge-opt.js"></script>
+<script>
+    window.onload = function () { skullbeware.Dodge().main(); }
+</script>
 </body>
 </html>
